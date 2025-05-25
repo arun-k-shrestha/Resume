@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arun Shrestha – Personal Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Varela Round', sans-serif;
+      background: linear-gradient(to bottom right, #f0f4f8, #dfefff);
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 950px;
+      margin: 0 auto 2rem auto;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+    .nav a {
+      margin-left: 1rem;
+      font-weight: bold;
+      color: #005a9c;
+    }
+    .nav a:hover {
+      color: #0d74c1;
+    }
+    .container {
+      max-width: 950px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      animation: slideUp 0.4s ease-in-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    h1, h2 {
+      color: #005a9c;
+      transition: color 0.3s ease;
+    }
+    h1:hover, h2:hover {
+      color: #0d74c1;
+    }
+    a {
+      color: #005a9c;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #003d6b;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .role {
+      font-weight: bold;
+    }
+    .date {
+      float: right;
+      color: gray;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      transition: transform 0.2s;
+    }
+    li:hover {
+      transform: scale(1.01);
+    }
+    .about-me {
+      margin-bottom: 2rem;
+      background-color: #e9f5ff;
+      padding: 1rem;
+      border-left: 5px solid #005a9c;
+      border-radius: 8px;
+    }
+    .about-me img {
+      width: 120px;
+      border-radius: 50%;
+      float: left;
+      margin-right: 1rem;
+    }
+    .about-me p {
+      margin: 0;
+    }
+    .footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .bubble-wrapper {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+    }
+
+    .bubble-image {
+    display: inline-block;
+    position: relative;
+    width: 220px;
+    height: 220px;
+    }
+
+    .bubble-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    border: 4px solid #fff;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    }
+
+    .bubble-image svg {
+    width: 220px;
+    height: 220px;
+    display: block;
+    }
+
+    .bubble-main {
+    fill: #b3d4fc;
+    opacity: 0.6;
+    }
+
+    .bubble {
+    fill: #b3d4fc;
+    opacity: 0.3;
+    animation: moveBubble 3s infinite ease-in-out alternate;
+    }
+
+    @keyframes moveBubble {
+    0%   { transform: translate(0px, 0px); }
+    50%  { transform: translate(10px, -15px); }
+    100% { transform: translate(-10px, 15px); }
+    }
+
+    </style>
+
+    </head>
+    <body>
+    <nav class="nav">
+        <div class="bubble-wrapper">
+    <div class="bubble-image">
+        <img src="./Arun_Moji.png" alt="Facemoji of Arun" />
+        <svg viewBox="0 0 350 350">
+        <defs>
+            <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+            <feColorMatrix in="blur" mode="matrix"
+                values="1 0 0 0 0  
+                        0 1 0 0 0  
+                        0 0 1 0 0  
+                        0 0 0 21 -9" result="cm" />
+            </filter>
+        </defs>
+        <g filter="url(#goo)">
+            <circle class="bubble-main" cx="175" cy="175" r="130" />
+            <circle class="bubble" cx="175" cy="175" r="122.7" />
+            <circle class="bubble" cx="175" cy="175" r="122.7" />
+            <circle class="bubble" cx="175" cy="175" r="122.7" />
+            <circle class="bubble" cx="175" cy="175" r="122.7" />
+            <circle class="bubble" cx="175" cy="175" r="122.7" />
+        </g>
+        </svg>
+    </div>
+    </div>
+
+    <div><h1><strong>Arun Shrestha</strong></h1></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section id="about" class="about-me clearfix">
+      <p>Hi, I'm <strong>Arun</strong> — a software engineer, researcher, and builder of AI-powered tools for the modern web. With experience spanning frontend design, backend systems, education, and financial AI, I enjoy creating technology that's both beautiful and impactful. I’m currently building <a href="https://danfe.ai" target="_blank">Danfe.ai</a> and completing my Master's in Computer Science at WWU.</p>
+    </section>
+
+    <section id="skills" class="section">
+  <h2>Technical Skills</h2>
+  <p><strong>Programming Languages:</strong> C, Java, JavaScript, Python, Go, Racket, SQL</p>
+  <p><strong>Tools & Technologies:</strong> UNIX, Git, MongoDB, Node.js, Drupal, VS Code, Firebase</p>
+  <p><strong>Frameworks & Libraries:</strong> React, Express, Mongoose, NumPy, Matplotlib, Nivo, Recharts, LangChain</p>
+</section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <p class="role">Founding Engineer – Danfe.ai <span class="date">Nov 2023 – Present</span></p>
+<ul>
+  <li>Acquired 150+ early subscribers within 3 months by launching an AI-powered stock analytics platform using OpenAI and FinGPT.</li>
+  <li>Engineered interactive dashboards (Recharts, Nivo) to visualize revenue flow, income statements, and insider trading, improving user retention by 40%.</li>
+  <li>Integrated secure user auth and Stripe subscription billing, reducing churn due to payment errors by 25%.</li>
+  <li>Shipped 10+ iterations using agile methodology and OOP design based on user feedback.</li>
+</ul>
+
+<p class="role"> Front-End Engineer II – Western Washington University <span class="date">Dec 2023 – Present</span></p>
+<ul>
+  <li>Refactored 100+ pages of WWU's Sustainability site with lazy loading and conditional rendering, improving load times by 35%.</li>
+  <li>Boosted retention by 15% through redesigned navigation and Google Analytics integration.</li>
+  <li>Led responsive design updates and accessibility improvements for WCAG compliance.</li>
+</ul>
+
+<p class="role">Software Engineer – NAIGC <span class="date">May 2022 – Jun 2023</span></p>
+<ul>
+  <li>Modernized event registration and athlete tracking for 5K+ users using Node.js, Express, and MongoDB.</li>
+  <li>Developed secure, role-based admin dashboards and modularized legacy codebase.</li>
+  <li>Built CI/CD pipelines with GitHub Actions, reducing bug recurrence by 30%.</li>
+  <li>Led Hack Week product pitches and prototypes.</li>
+</ul>
+
+<p class="role">Applied Tech Dept. Head – Yellow Wood Academy <span class="date">Jun 2022 – Jun 2023</span></p>
+<ul>
+  <li>Developed 14 CTE standards aligned with Washington’s OSPI curriculum.</li>
+  <li>Oversaw budgeting and procurement for technical equipment (3D printers, CNC, etc.).</li>
+  <li>Facilitated department strategy, DEI initiatives, and instructor mentorship.</li>
+</ul>
+
+<p class="role">Software Programming Instructor – Yellow Wood Academy <span class="date">Aug 2021 – Jun 2022</span></p>
+<ul>
+  <li>Taught Python, JavaScript, SQL, and statistics to students with ADHD and autism.</li>
+  <li>Raised average test scores by 20 percentage points over previous years.</li>
+  <li>Customized instruction using behavior data and assessment tracking.</li>
+</ul>
+
+<p class="role">Software Engineer Intern – Educashare <span class="date">Nov 2020 – Aug 2021</span></p>
+<ul>
+  <li>Built responsive UI and navigation for an edtech platform, improving engagement.</li>
+  <li>Worked on high-priority features with the CTO across frontend/backend stacks.</li>
+  <li>Optimized logic and integrated RESTful services, reducing load times.</li>
+  <li>Reviewed code and increased delivery speed by 15%.</li>
+</ul>
+    <section id="education" class="section">
+  <h2>Education</h2>
+  <p class="role">Master of Science in Computer Science <span class="date">Dec 2025 (Expected)</span></p>
+  <p>Western Washington University, Bellingham, WA</p>
+
+  <p class="role">Bachelor of Arts in Economics & Mathematics, <em>cum laude</em> <span class="date">June 2020</span></p>
+  <p>Kalamazoo College, Kalamazoo, MI</p>
+    </section>
+
+    <section id="research" class="section">
+    <h2>Research</h2>
+
+    <p class="role">Scaling Bitcoin with Secure Payment Channel Networks <span class="date">Sept 2024 – Present</span></p>
+    <ul>
+        <li>Conducted research on improving Bitcoin scalability using Payment Channel Networks (PCNs).</li>
+        <li>Analyzed routing inefficiencies from channel imbalances and one-sided liquidity depletion.</li>
+        <li>Explored cryptographic techniques like Multiparty Computation (MPC) to enhance privacy and trust.</li>
+        <li>Proposed a novel rating-based routing protocol to detect and avoid malicious nodes in the network.</li>
+    </ul>
+
+    <p class="role">Advancing Financial Intelligence with Large Language Models <span class="date">Jan 2025 – May 2025</span></p>
+    <ul>
+        <li>Investigated the application of LLMs to extract actionable stock signals from financial news.</li>
+        <li>Compared FinBERT, BloombergGPT, FinGPT, and other domain-specific models.</li>
+        <li>Designed a fine-tuning pipeline with financial corpora to reduce hallucinations in outputs.</li>
+        <li>Proposed a cost-efficient, transparent LLM-based system to democratize financial analysis for retail investors.</li>
+    </ul>
+    </section>
+
+     <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:arunkshrestha3@gmail.com">arunkshrestha3@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+12693651606">269-365-1606</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/arun-k-shrestha" target="_blank">github.com/arun-k-shrestha</a></p>
+    <p><strong>Website:</strong> <a href="https://danfe.ai" target="_blank">danfe.ai</a></p>
+    </section>
+
+  </div>
+
+
+
+
+  <div class="footer">
+    © 2025 Arun Shrestha
+  </div>
+</body>
+</html>
